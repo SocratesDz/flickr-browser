@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Flickr Browser</string>
+    <string name="url">https://api.flickr.com/services/feeds/photos_public.gne?tags=android,lollipop&amp;format=json</string>
+</resources>
