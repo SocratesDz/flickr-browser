@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        GetRawData rawData = new GetRawData(getString(R.string.url));
-        rawData.execute();
+        GetFlickrJsonData jsonData = new GetFlickrJsonData("android, lollipop", true, this);
+        jsonData.execute();
     }
 }

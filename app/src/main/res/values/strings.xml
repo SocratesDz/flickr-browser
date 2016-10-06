@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">Flickr Browser</string>
     <string name="url">https://api.flickr.com/services/feeds/photos_public.gne?tags=android,lollipop&amp;format=json</string>
+    <string name="base_url">https://api.flickr.com/services/feeds/photos_public.gne</string>
+
+    <!-- PARAMS -->
+    <string name="param_tags">tags</string>
+    <string name="param_format">format</string>
+    <string name="param_tagmode">tagmode</string>
+    <string name="param_nojsoncallback">nojsoncallback</string>
+
+    <!-- RESPONSE FIELDS -->
+    <string name="res_items">items</string>
+    <string name="res_title">title</string>
+    <string name="res_media">media</string>
+    <string name="res_photo_url">m</string>
+    <string name="res_author">author</string>
+    <string name="res_author_id">author_id</string>
+    <string name="res_link">link</string>
+    <string name="res_tags">tags</string>
 </resources>
