@@ -24,9 +24,9 @@ public class GetFlickrJsonData extends GetRawData {
 
     public GetFlickrJsonData(String searchCriteria, boolean matchAll, Context context) {
         super(null);
-        createAndUpdateUri(searchCriteria, matchAll);
         mContext = context;
         mPhotos = new ArrayList<>();
+        createAndUpdateUri(searchCriteria, matchAll);
     }
 
     public void execute() {
@@ -52,6 +52,10 @@ public class GetFlickrJsonData extends GetRawData {
                 .build();
 
         return mDestinationUri != null;
+    }
+
+    public List<Photo> getPhotos() {
+        return mPhotos;
     }
 
     public void processResult() {
@@ -107,7 +111,8 @@ public class GetFlickrJsonData extends GetRawData {
         }
 
         protected String doInBackground(String... params) {
-            return super.doInBackground(params);
+            String[] par = { mDestinationUri.toString() };
+            return super.doInBackground(par);
         }
 
 
