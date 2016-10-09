@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mRecyclerView.setAdapter(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ProccessPhotos proccessPhotos = new ProccessPhotos("android,lollipop", true, this);
+        ProccessPhotos proccessPhotos = new ProccessPhotos("google", true, this);
         proccessPhotos.execute();
     }
 
