@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
  * Created by socratesdiaz on 10/10/16.
  */
 public class BaseActivity extends AppCompatActivity {
-    public static final String FLICKR_QUERY = "FICKLR_QUERY";
+    public static final String FLICKR_QUERY = "FLICKR_QUERY";
     private Toolbar mToolbar;
 
     protected Toolbar activateToolbar() {
