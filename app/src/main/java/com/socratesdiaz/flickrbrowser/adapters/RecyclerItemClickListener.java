@@ -1,4 +1,4 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

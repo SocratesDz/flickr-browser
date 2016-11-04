@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.socratesdiaz.flickrbrowser.ViewPhotoDetailsActivity">
+    tools:context=".views.ViewPhotoDetailsActivity">
 
 
     <LinearLayout
@@ -53,15 +53,6 @@
                         android:scaleType="center"
                         android:src="@drawable/placeholder" />
 
-                    <TextView
-                        android:id="@+id/photo_author"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top|center"
-                        android:paddingTop="8dp"
-                        android:textColor="@color/flickrSecondaryTextColor"
-                        android:textSize="14sp" />
-
                 </FrameLayout>
 
                 <TextView
@@ -71,7 +62,15 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
-                    android:textColor="@color/flickrPrimaryTextColor"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/photo_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
                     android:textSize="14sp" />
 
                 <TextView
@@ -81,7 +80,6 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="8dp"
-                    android:textColor="@color/flickrPrimaryTextColor"
                     android:textSize="10sp" />
 
             </LinearLayout>

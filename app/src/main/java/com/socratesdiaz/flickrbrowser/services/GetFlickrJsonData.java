@@ -1,8 +1,11 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.services;
 
 import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
+
+import com.socratesdiaz.flickrbrowser.R;
+import com.socratesdiaz.flickrbrowser.models.Photo;
 
 import org.json.JSONArray;
 import org.json.JSONException;

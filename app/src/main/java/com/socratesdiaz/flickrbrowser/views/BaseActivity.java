@@ -1,7 +1,9 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import com.socratesdiaz.flickrbrowser.R;
 
 /**
  * Created by socratesdiaz on 10/10/16.
@@ -24,7 +26,8 @@ public class BaseActivity extends AppCompatActivity {
     protected Toolbar activateToolbarWithHomeEnabled() {
         activateToolbar();
         if(mToolbar != null) {
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            if(getSupportActionBar() != null)
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
         return mToolbar;
     }

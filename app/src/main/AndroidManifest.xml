@@ -9,8 +9,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Flickr">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme.Flickr2">
+        <activity android:name="com.socratesdiaz.flickrbrowser.views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,13 +18,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SearchActivity"
+            android:name=".views.SearchActivity"
             android:label="@string/title_activity_search"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Flickr">
+            android:parentActivityName="com.socratesdiaz.flickrbrowser.views.MainActivity"
+            android:theme="@style/AppTheme.Flickr2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.socratesdiaz.flickrbrowser.MainActivity" />
+                android:value="com.socratesdiaz.flickrbrowser.views.MainActivity" />
 
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
@@ -37,13 +37,13 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity
-            android:name=".ViewPhotoDetailsActivity"
+            android:name=".views.ViewPhotoDetailsActivity"
             android:label="@string/title_activity_view_photo_details"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/Theme.Flickr">
+            android:parentActivityName="com.socratesdiaz.flickrbrowser.views.MainActivity"
+            android:theme="@style/AppTheme.Flickr2">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.socratesdiaz.flickrbrowser.MainActivity" />
+                android:value="com.socratesdiaz.flickrbrowser.views.MainActivity" />
         </activity>
     </application>
 

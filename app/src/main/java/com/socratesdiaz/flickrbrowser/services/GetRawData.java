@@ -1,4 +1,4 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.services;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -14,9 +14,8 @@ import java.net.URL;
  * Created by socratesdiaz on 9/26/16.
  */
 
-enum DownloadStatus { IDLE, PROCESSING, NOT_INITIALISED, FAILED_OR_EMPTY, OK }
-
 public class GetRawData {
+    public static enum DownloadStatus { IDLE, PROCESSING, NOT_INITIALISED, FAILED_OR_EMPTY, OK }
     private final static String LOG_TAG = GetRawData.class.getSimpleName();
     private String mRawUrl;
     private String mData;

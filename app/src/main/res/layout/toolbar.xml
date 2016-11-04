@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="?actionBarSize"
     android:orientation="vertical"
-    flickr:theme="@style/ActionBarThemeOverlay"
-    flickr:titleTextAppearance="@style/ActionBar.TitleText">
+    flickr:theme="@style/ActionBarThemeOverlay2">
 
 </android.support.v7.widget.Toolbar>

@@ -1,19 +1,16 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.views;
 
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
+
+import com.socratesdiaz.flickrbrowser.R;
 
 public class SearchActivity extends BaseActivity {
 
@@ -39,7 +36,7 @@ public class SearchActivity extends BaseActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                sharedPreferences.edit().putString(FLICKR_QUERY, query).commit();
+                sharedPreferences.edit().putString(FLICKR_QUERY, query).apply();
                 mSearchView.clearFocus();
                 finish();
                 return true;

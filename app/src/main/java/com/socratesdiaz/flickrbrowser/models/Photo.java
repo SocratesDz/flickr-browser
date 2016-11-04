@@ -1,4 +1,4 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.models;
 
 import java.io.Serializable;
 

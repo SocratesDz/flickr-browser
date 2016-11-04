@@ -1,18 +1,24 @@
-package com.socratesdiaz.flickrbrowser;
+package com.socratesdiaz.flickrbrowser.views;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.socratesdiaz.flickrbrowser.adapters.FlickrRecyclerViewAdapter;
+import com.socratesdiaz.flickrbrowser.services.GetFlickrJsonData;
+import com.socratesdiaz.flickrbrowser.R;
+import com.socratesdiaz.flickrbrowser.adapters.RecyclerItemClickListener;
+import com.socratesdiaz.flickrbrowser.models.Photo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +38,7 @@ public class MainActivity extends BaseActivity {
         activateToolbar();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
         flickrRecyclerViewAdapter = new FlickrRecyclerViewAdapter(MainActivity.this,
                 new ArrayList<Photo>());
@@ -41,15 +47,14 @@ public class MainActivity extends BaseActivity {
                 new RecyclerItemClickListener.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
-                        Toast.makeText(MainActivity.this, "Normal tap", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onItemLongClick(View view, int position) {
                         //Toast.makeText(MainActivity.this, "Long tap", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(MainActivity.this, ViewPhotoDetailsActivity.class);
                         intent.putExtra(PHOTO_TRANSFER, flickrRecyclerViewAdapter.getPhoto(position));
                         startActivity(intent);
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
                     }
                 }));
     }
